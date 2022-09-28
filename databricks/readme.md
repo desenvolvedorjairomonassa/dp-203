@@ -7,13 +7,13 @@ DBC Source (notebookc databricks)
 
  * https://github.com/MicrosoftLearning/DP-203-Data-Engineer/raw/master/Allfiles/microsoft-learning-paths-databricks-notebooks/data-engineering/DBC/07-Dataframe-Advanced-Methods.dbc
 
-#Problem 1: count articles <br>
+# Problem 1: count articles <br>
 Solution  ->  pyspark: <br>
  df=spark.read.parquet(path).select('article').distinct() <br>
  totalArticles = df.count() # Identify the total number of records remaining. <br>
   print("Distinct Articles: {0:,}".format(totalArticles)) <br>
   
-#Problem 2 : deduplication customer <br>
+# Problem 2 : deduplication customer <br>
 Solution -> pyspark : <br>
 from pyspark.sql.functions import col, regexp_replace, upper <br>
 from pyspark.sql.types import *    <br>
